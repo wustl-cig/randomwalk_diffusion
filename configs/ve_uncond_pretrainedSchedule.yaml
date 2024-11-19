@@ -1,0 +1,103 @@
+machinesetup:
+  gpu_idx: 0                                                      # Attention 1
+  save_dir: ./experiment_result                                   # Attention 2: The path where you save your results         
+
+data:
+  name: ffhq
+  root: ./data/inpainting_random_samples/                         # Attention 3: The path of testset
+
+langevin_hyperparam:                                              # Attention 4: Possible customization for your own Langevin dynamics (leave it when you only want to reproduce results)
+  num_iters: 10000
+  # temperature: 0.77
+  temperature: 0.6
+  scaling_constant_of_step_size: 0.02
+  save_image: true
+
+model:
+  pretrained_check_point: ./pretrained_models/checkpoint_48.pth   # Attention 5: The path where you save your VE score model
+  noise_perturbation_type: ve
+  name: ncsnpp
+  pretrained_model: ve_ffhq_256_ncsnpp_continuous
+  sigma_max: 348
+  sigma_min: 0.01
+  beta_min: 0.1
+  beta_max: 20.0
+  dropout: 0.0
+  scale_by_sigma: true
+  ema_rate: 0.999
+  normalization: GroupNorm
+  nonlinearity: swish
+  nf: 128
+  ch_mult: [1, 1, 2, 2, 2, 2, 2]
+  num_res_blocks: 2
+  attn_resolutions: [16]
+  resamp_with_conv: true
+  conditional: true
+  fir: true
+  fir_kernel: [1, 3, 3, 1]
+  skip_rescale: true
+  resblock_type: biggan
+  progressive: output_skip
+  progressive_input: input_skip
+  progressive_combine: sum
+  attention_type: ddpm
+  init_scale: 0.0
+  fourier_scale: 16
+  conv_size: 3
+  embedding_type: fourier
+
+imagedetail:
+  num_channels: 3
+  image_size: 256
+  centered: false
+
+measurement:
+  operator:
+    name: uncondition
+  noise:
+    name: gaussian # gaussian
+    sigma: 0. # 0.05
+
+
+training:
+  batch_size: 64
+  n_iters: 2400001
+  snapshot_freq: 50000
+  log_freq: 50
+  eval_freq: 100
+  snapshot_freq_for_preemption: 5000
+  snapshot_sampling: true
+  likelihood_weighting: false
+  continuous: true
+  reduce_mean: false
+  sde: vesde
+
+sampling:
+  n_steps_each: 1
+  noise_removal: true
+  probability_flow: false
+  snr: 0.075
+  method: pc
+  predictor: ancestral_sampling
+  corrector: langevin
+
+eval:
+  begin_ckpt: 50
+  end_ckpt: 96
+  batch_size: 1
+  enable_sampling: true
+  num_samples: 50000
+  enable_loss: true
+  enable_bpd: false
+  bpd_dataset: test
+
+optim:
+  weight_decay: 0
+  optimizer: Adam
+  lr: 2e-4
+  beta1: 0.9
+  eps: 1e-8
+  warmup: 5000
+  grad_clip: 1.0
+
+seed: 42

@@ -1,0 +1,59 @@
+machinesetup:
+  gpu_idx: 0                                                      # Attention 1
+  save_dir: ./experiment_result                                   # Attention 2: The path where you save your results         
+
+data:
+  name: ffhq
+  root: ./data/vp_inpainting_random_samples/                         # Attention 3: The path of testset
+
+langevin_hyperparam:                                              # Attention 4: Possible customization for your own Langevin dynamics (leave it when you only want to reproduce results)
+  schedule: sigmoid
+  num_iters: 10000
+  temperature: 1.
+  scaling_constant_of_step_size: 0.38
+  save_image: true
+
+measurement:                                                      # Attention 5: Inpainting problem setting (leave it when you only want to reproduce results)
+  operator:
+    name: inpainting
+  mask_opt:
+    mask_type: random 
+    mask_len_range: !!python/tuple [128, 129] 
+    mask_prob_range: !!python/tuple [0.92, 0.92] 
+    image_size: 256
+  noise:
+    name: gaussian # gaussian
+    sigma: 0.2 # 0.05
+
+model:
+  pretrained_check_point: ./pretrained_models/ffhq_10m.pt         # Attention 6: The path where you save your VP score model       
+  noise_perturbation_type: vp
+  image_size: 256
+  num_channels: 128
+  num_res_blocks: 1
+  channel_mult: ""
+  learn_sigma: True
+  class_cond: False
+  use_checkpoint: False
+  attention_resolutions: 16
+  num_heads: 4
+  num_head_channels: 64
+  num_heads_upsample: -1
+  use_scale_shift_norm: True
+  dropout: 0.0
+  resblock_updown: True
+  use_fp16: False
+  use_new_attention_order: False
+
+vp_diffusion:                                                # Attention 7: All specifications about VP diffusion model (leave it when you use the same pretrained model)
+  sampler: ddpm
+  steps: 1000
+  timestep_respacing: 1000
+  beta_at_clean: 0.0001
+  noise_schedule: linear
+  model_mean_type: epsilon
+  model_var_type: learned_range
+  dynamic_threshold: False
+  clip_denoised: True
+  rescale_timesteps: False
+
