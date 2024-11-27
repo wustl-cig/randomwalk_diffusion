@@ -1,4 +1,4 @@
-# Tweedie Is (Almost) All You Need
+# Random Walks with Tweedie: A Unified Framework for Diffusion Models
 
 <!-- ![result-gif1](./figures/thumbnail.gif) -->
 <!-- <img src="./figures/thumbnail.gif" autoplay="false" loop="false"> -->
@@ -33,9 +33,9 @@ The proposed framework has the added benefit of enabling conditional sampling wi
 
 ### 1) Clone the repository
 ```
-git clone https://github.com/wustl-cig/tweedie_is_all_you_need
+git clone https://github.com/wustl-cig/diffusion_template
 
-cd tweedie_is_all_you_need
+cd diffusion_template
 ```
 
 ### 2) Download Pretrained Score Function
