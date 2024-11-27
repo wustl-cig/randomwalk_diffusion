@@ -33,9 +33,9 @@ The proposed framework has the added benefit of enabling conditional sampling wi
 
 ### 1) Clone the repository
 ```
-git clone https://github.com/wustl-cig/diffusion_template
+git clone https://github.com/wustl-cig/randomwalk_diffusion
 
-cd diffusion_template
+cd randomwalk_diffusion
 ```
 
 ### 2) Download Pretrained Score Function
@@ -46,9 +46,9 @@ cd diffusion_template
 
 ### 3) Virtual environment setup
 ```
-conda create -n Tweedie python=3.9.19
+conda create -n Randomwalk python=3.9.19
 
-conda activate Tweedie
+conda activate Randomwalk
 
 pip install -r requirements.txt
 ```
