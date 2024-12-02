@@ -6,6 +6,7 @@
 ![result-gif1](./figures/inpainting.gif)
 ![result-git2](./figures/super_resolution.gif)
 -->
+![cover-img](./figures/cover.png)
 
 ## Abstract
 We present a simple template for designing generative diffusion model algorithms based on an interpretation of diffusion sampling as a sequence of random walks.
@@ -27,7 +28,7 @@ and demonstrate that other, more straightforward algorithmic choices
 lead to effective diffusion models.
 The proposed framework has the added benefit of enabling conditional sampling without any likelihood approximation.
 
-![cover-img](./figures/cover.png)
+
 
 ## Environment setting
 
