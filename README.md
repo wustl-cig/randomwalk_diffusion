@@ -122,7 +122,15 @@ We partially adapt the variance-exploding code structure from [score_sde_pytorch
 ## Citation
 
 ```
-@inproceedings{
-}
+@article{park2024randomwalks,
+	  title={Random Walks with Tweedie: A Unified Framework for Diffusion Models},
+	  author={Park, Chicago Y.
+		and McCann, Michael T.
+		and Garcia-Cardona, Cristina
+		and Wohlberg, Brendt
+		and Kamilov, Ulugbek S.},
+	  journal={arXiv preprint arXiv:2411.18702},
+	  year={2024}
+	}
 ```
 
