@@ -1,6 +1,6 @@
-# [Random Walks with Tweedie: A Unified Framework for Diffusion Models]([https://ieeexplore.ieee.org/abstract/document/10214618](https://arxiv.org/abs/2411.18702))
+# [Random Walks with Tweedie: A Unified Framework for Diffusion Models](https://arxiv.org/abs/2411.18702)
 
-[[arXiv]([https://arxiv.org/abs/2210.03837](https://arxiv.org/abs/2411.18702))]
+[[arXiv]](https://arxiv.org/abs/2411.18702)
 
 <!-- ![result-gif1](./figures/thumbnail.gif) -->
 <!-- <img src="./figures/thumbnail.gif" autoplay="false" loop="false"> -->
