@@ -101,7 +101,7 @@ python3 sample.py --diffusion_config configs/{TASK_YAML_FILE_NAME}.yaml    # exa
 ```
 sample.py                       # Read yaml file
 │   
-├────────── vp_langevin.py      # all operations of variance-exploding-based Langevin dynamics
+├────────── vp_langevin.py      # all operations of variance-preserving-based Langevin dynamics
 │   
 └────────── ve_langevin.py      # all operations of variance-exploding-based Langevin dynamics
 ```
