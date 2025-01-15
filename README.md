@@ -31,7 +31,6 @@ lead to effective diffusion models.
 The proposed framework has the added benefit of enabling conditional sampling without any likelihood approximation.
 
 
-
 ## Environment setting
 
 ### 1) Clone the repository
@@ -115,6 +114,14 @@ sample.py                       # Read yaml file
 
 - **`score_sde_inverse/score_inverse/sampling/ve_sampler.py`**: This file is where all VE-related computations are done. Please check out function `ve_langevin_sampling` and `ve_sampler` for implementation detail.
 -->
+
+<h2 style="color:red;">Troubleshooting</h2>
+
+```diff
+! If you encounter any issues, feel free to reach out via email at chicago@wustl.edu. 
+```
+
+
 
 ## Code references
 
