@@ -8,11 +8,11 @@ data:
   
 langevin_hyperparam:                                              # Attention 4: Possible customization for your own Langevin dynamics (leave it when you only want to reproduce results)
   schedule: denoiser
-  num_iters: 10000
-  temperature: 0.85
+  num_iters: 1000
+  temperature: 0.4
   # temperature: 0.909091
   # scaling_constant_of_step_size: 0.05
-  scaling_constant_of_step_size: 0.08
+  scaling_constant_of_step_size: 0.4
   save_image: true
 
 measurement:                                                     
