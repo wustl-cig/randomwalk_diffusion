@@ -754,7 +754,7 @@ def get_noiselevel_alphas_timestep(beta_at_clean, num_iters, schedule_name = "de
         start = 0
         end = 3
         # tau = 0.7
-        tau = 0.5
+        tau = 0.3
         clip_min = 1e-9
         
         extended_time_array_for_sigmoid = np.linspace(0, 1, extended_length)
