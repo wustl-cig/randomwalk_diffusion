@@ -7,10 +7,10 @@ data:
   root: ./data/inpainting_random_samples/                         # Attention 3: The path of testset
 
 langevin_hyperparam:                                              # Attention 4: Possible customization for your own Langevin dynamics (leave it when you only want to reproduce results)
-  num_iters: 10000
+  num_iters: 1000
   # temperature: 0.77
-  temperature: 0.6
-  scaling_constant_of_step_size: 0.02
+  temperature: 0.4
+  scaling_constant_of_step_size: 0.16
   save_image: true
 
 model:
