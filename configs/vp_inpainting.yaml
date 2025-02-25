@@ -8,9 +8,9 @@ data:
 
 langevin_hyperparam:                                              # Attention 4: Possible customization for your own Langevin dynamics (leave it when you only want to reproduce results)
   schedule: sigmoid
-  num_iters: 10000
-  temperature: 1.
-  scaling_constant_of_step_size: 0.38
+  num_iters: 750
+  temperature: .0
+  scaling_constant_of_step_size: 0.77683
   save_image: true
 
 measurement:                                                      # Attention 5: Inpainting problem setting (leave it when you only want to reproduce results)
