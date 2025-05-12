@@ -52,6 +52,8 @@ conda create -n Randomwalk python=3.9.19
 
 conda activate Randomwalk
 
+conda install -c conda-forge mpi4py mpich
+
 pip install -r requirements.txt
 ```
 
