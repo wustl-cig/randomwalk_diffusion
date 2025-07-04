@@ -1,4 +1,4 @@
-# [Random Walks with Tweedie: A Unified Framework for Diffusion Models](https://arxiv.org/abs/2411.18702)
+# [Random Walks with Tweedie: A Unified View of Score-Based Diffusion Models](https://arxiv.org/abs/2411.18702)
 
 [[arXiv]](https://arxiv.org/abs/2411.18702)
 
