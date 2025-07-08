@@ -13,9 +13,7 @@
 ## Abstract
 We present a concise derivation for several influential score-based diffusion models
 that relies on only a few textbook results.
-Diffusion models have recently emerged as powerful tools for generating realistic, synthetic signals --- %
-particularly natural images --- %
-and often play a role in state-of-the-art algorithms for inverse problems in image processing.
+Diffusion models have recently emerged as powerful tools for generating realistic, synthetic signals --- particularly natural images --- and often play a role in state-of-the-art algorithms for inverse problems in image processing.
 While these algorithms are often surprisingly simple,
 the theory behind them is not,
 and multiple complex theoretical justifications exist in the literature.
