@@ -11,24 +11,20 @@
 ![cover-img](./figures/cover.png)
 
 ## Abstract
-We present a simple template for designing generative diffusion model algorithms based on an interpretation of diffusion sampling as a sequence of random walks.
-Score-based diffusion models are widely used to generate high-quality images.
-Diffusion models have also been shown to yield state-of-the-art performance in many inverse problems.
+We present a concise derivation for several influential score-based diffusion models
+that relies on only a few textbook results.
+Diffusion models have recently emerged as powerful tools for generating realistic, synthetic signals --- %
+particularly natural images --- %
+and often play a role in state-of-the-art algorithms for inverse problems in image processing.
 While these algorithms are often surprisingly simple,
 the theory behind them is not,
 and multiple complex theoretical justifications exist in the literature.
 Here,
 we provide a simple and largely self-contained theoretical justification
-for score-based-diffusion models
-that avoids using the theory of Markov chains or reverse diffusion,
-instead centering the theory of random walks and Tweedie's formula.
-This approach leads to unified algorithmic templates for network training and sampling.
-In particular, these templates cleanly separate training from sampling,
-e.g., the noise schedule used during training need not match the one used during sampling.
-We show that several existing diffusion models correspond to particular choices within this template
-and demonstrate that other, more straightforward algorithmic choices
-lead to effective diffusion models.
-The proposed framework has the added benefit of enabling conditional sampling without any likelihood approximation.
+for score-based diffusion models that is targeted towards the signal processing community.
+This approach leads to generic algorithmic templates for training and generating samples with diffusion models.
+We show that several influential diffusion models correspond to particular choices within these templates and demonstrate that alternative, more straightforward algorithmic choices can provide comparable results.
+This approach has the added benefit of enabling conditional sampling without any likelihood approximation.
 
 
 ## Environment setting
@@ -134,15 +130,15 @@ We partially adapt the variance-exploding code structure from [score_sde_pytorch
 ## Citation
 
 ```
-@article{park2024randomwalks,
-	  title={Random Walks with Tweedie: A Unified Framework for Diffusion Models},
+@article{park2025randomwalks,
+	  title={Random Walks with Tweedie: A Unified View of Score-Based Diffusion Models},
 	  author={Park, Chicago Y.
 		and McCann, Michael T.
 		and Garcia-Cardona, Cristina
 		and Wohlberg, Brendt
 		and Kamilov, Ulugbek S.},
-	  journal={arXiv preprint arXiv:2411.18702},
-	  year={2024}
+	  journal={IEEE Signal Processing Magazine},
+	  year={2025}
 	}
 ```
 
